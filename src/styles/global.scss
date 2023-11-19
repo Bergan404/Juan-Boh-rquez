@@ -24,7 +24,7 @@ body {
         justify-content: center;
         align-items: center;
         position: relative;
-        z-index: 501;
+        z-index: 999;
     }
 
     &__wrap {
@@ -184,4 +184,61 @@ body {
     100% {
         transform: perspective(300px) rotateX(360deg) rotateY(61deg) translateY(50px) rotate(90deg);
     }
+}
+svg {
+	width: 80vmin;
+	height: 80vmin;
+	overflow: visible;
+}
+
+#stroke-path {
+	fill: #0000;
+	stroke: #fff;
+	stroke-linecap: round;
+	animation: stroke-anim 3s cubic-bezier(0, 0, 0.8, 0),
+		stroke-disappear 1s 3s cubic-bezier(0, 0, 0, 1) forwards;
+	filter: url(#stroke-filter);
+}
+@keyframes stroke-anim {
+	0% {
+		stroke-dasharray: 0 1024;
+		stroke-width: 0;
+	}
+	100% {
+		stroke-dasharray: 768 0;
+		stroke-width: 6;
+	}
+}
+@keyframes stroke-disappear {
+	from {
+		stroke-width: 6;
+	}
+	to {
+		stroke-width: 0;
+	}
+}
+
+#fill-path {
+	fill: #fff0;
+	stroke: #0000;
+	transform-origin: center;
+	animation: fill-path-appear 1s 2.8s cubic-bezier(0.5, 0, 0, 1) forwards;
+	filter: url(#fill-filter);
+}
+@keyframes fill-path-appear {
+	from {
+		fill: #fff0;
+		scale: 1.05;
+	}
+	to {
+		fill: #fff;
+	}
+}
+
+#instruction-text {
+	position: absolute;
+	bottom: 1vh;
+	color: white;
+	font-size: 5vh;
+	font-family: Arial, sans-serif;
 }
