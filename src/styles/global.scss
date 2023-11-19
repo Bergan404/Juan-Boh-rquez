@@ -186,9 +186,10 @@ body {
     }
 }
 svg {
-	width: 80vmin;
-	height: 80vmin;
+	// width: 80vmin;
+	// height: 80vmin;
 	overflow: visible;
+    margin: auto;
 }
 
 #stroke-path {
