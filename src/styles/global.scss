@@ -5,6 +5,16 @@ body {
     overflow: hidden;
 }
 
+.overlay {
+    width: 110vw;
+    height: 110vh;
+    position: absolute;
+    background: #00000085;
+    z-index: 999;
+    left: 0;
+    top: 0;
+}
+
 .m-logo {
 
     & {
@@ -77,6 +87,8 @@ body {
         left: 50%;
         margin-left: -100vw;
         width: 200vw;
+        // margin-left: -10vw;
+        // width: 20vw;
         height: 150vh;
         transform: scaleY(0);
         background-image:
@@ -101,6 +113,8 @@ body {
         left: 50%;
         margin-left: -100vw;
         width: 200vw;
+        // margin-left: -10vw;
+        // width: 20vw;
         height: 150vh;
         transform: scaleY(0);
         background-image:
@@ -121,15 +135,17 @@ body {
         // background-color: black;
         position: absolute;
         top: 50%;
-        margin-top: -90vh;
+        margin-top: -75vh;
         left: 50%;
-        margin-left: -100vw;
+        margin-left: -111vw;
         width: 200vw;
+        // margin-left: -10vw;
+        // width: 20vw;
         height: 150vh;
         transform: scaleY(0);
         background-image:
             linear-gradient(0deg, transparent 24%, rgba(white, 0.5) 25%, rgba(white, 0.9) 26%, transparent 27%, transparent 74%, rgba(white, 0.5) 75%, rgba(white, 0.9) 76%, transparent 77%, transparent),
-            linear-gradient(90deg, transparent 24%, rgba(white, 0.75) 25%, rgba(white, 0.25) 26%, transparent 27%, transparent 74%, rgba(white, 0.75) 75%, rgba(white, 0.25) 76%, transparent 77%, transparent);
+            linear-gradient(90deg, transparent 24%, rgba(red, 0.75) 25%, rgba(red, 0.25) 26%, transparent 27%, transparent 74%, rgba(red, 0.75) 75%, rgba(red, 0.25) 76%, transparent 77%, transparent);
         background-size: 50px 50px;
 
         &.is-animating {
@@ -162,10 +178,10 @@ body {
 
 @keyframes flyright {
     0% {
-        transform: perspective(300px) rotateX(100deg) rotateY(103deg) translateY(0%);
+        transform: perspective(300px) rotateX(360deg) rotateY(61deg) translateY(0%) rotate(90deg);
     }
 
     100% {
-        transform: perspective(300px) rotateX(100deg) rotateY(103deg) translateY(50px);
+        transform: perspective(300px) rotateX(360deg) rotateY(61deg) translateY(50px) rotate(90deg);
     }
 }
