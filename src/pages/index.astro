@@ -1,15 +1,24 @@
 ---
-import TheExperience from '../components/TheExperience.vue';
-import Layout from '../layouts/Layout.astro';
+import TheExperience from "../components/TheExperience.vue";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<TheExperience client:load />
-		<div class="retrowave-grid"></div>
+		<!-- <TheExperience client:load /> -->
+		<div class="wrapper">
+			<div class="m-grid"></div>
+			<div class="m-grid-left"></div>
+			<div class="m-grid-right"></div>
+			<div class="m-grid-top"></div>
+			<div class="m-logo">
+				<div class="m-logo__wrap">
+					<!-- <h1>Totally<br />Statical</h1>
+					<div class="subtitle">Static Site Generator</div> -->
+				</div>
+			</div>
+		</div>
 	</main>
 </Layout>
 
-<style>
-
-</style>
+<style></style>
