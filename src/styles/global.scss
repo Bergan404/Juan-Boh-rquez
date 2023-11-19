@@ -32,20 +32,6 @@ body {
         text-align: center;
     }
 
-    h1 {
-        font-family: 'Press start 2p', sans-serif;
-        font-size: 62px;
-        letter-spacing: -4px;
-        font-weight: 400;
-        margin: 0 0 0.25em;
-        line-height: 1.25;
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3ff8c6), color-stop(0%, #3fa8c6), color-stop(100%, #399ab2));
-        background-image: -webkit-linear-gradient(top, #3fa8c6 0%, #3fa8c6 0%, #ff9ab2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        // text-shadow: 0 px 1px #000;
-    }
-
     .subtitle {
         color: #ec008c;
         font-size: 50px;
