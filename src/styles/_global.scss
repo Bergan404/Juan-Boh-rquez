@@ -1,11 +1,103 @@
 @import url("https://use.typekit.net/mcz2kau.css");
+@import url(https://db.onlinewebfonts.com/c/73fc32cd047300366b3b02549e6500d5?family=Neutron+Demo);
+
+@font-face {
+    font-family: Neutrons;
+    src: url(/fonts/neutrons-demo.regular.ttf);
+}
 
 body {
-    background: #000;
+    background: #000 !important;
     // height: 100vh;
     // width: 100vw;
     overflow-x: hidden;
+    margin: 0;
 }
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1em;
+    margin: 1rem 0px 1rem 0px !important;
+    font-weight: bold;
+}
+
+h1 {
+    font-family: "HelveticaNeue-CondensedBold";
+    font-size: 4rem;
+
+    @include md-screen {
+        font-size: 7rem;
+    }
+}
+
+h2 {
+    font-size: 1.8rem;
+
+    &.lg {
+        font-size: 2.5rem;
+    }
+
+    @include md-screen {
+        font-size: 3rem;
+    }
+
+    @include lg-screen {
+        font-size: 4rem;
+
+        &.lg {
+            font-size: 6rem;
+        }
+    }
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2rem;
+
+    @include md-screen {
+        font-size: 2.5rem;
+    }
+
+    @include mobile {
+        font-size: 1.7em;
+    }
+}
+
+h5 {
+    font-family: "HelveticaNeue-CondensedBold";
+    font-size: 2rem;
+
+    @include md-screen {
+        font-size: 2.5rem;
+    }
+
+    @include mobile {
+        font-size: 1.7em;
+    }
+}
+
+h6 {
+    font-size: .5rem;
+}
+
+p {
+    font-size: 1.5rem;
+    margin: 0px 0px 1rem;
+    line-height: 1.5em;
+
+    @include mobile {
+        font-size: 1.27em;
+    }
+}
+
 
 .overlay {
     position: absolute;
@@ -65,7 +157,7 @@ body {
 }
 
 .grid-container {
-position: relative;
+    position: relative;
 
     .m-grid {
 
@@ -217,4 +309,14 @@ svg {
     color: white;
     font-size: 5vh;
     font-family: Arial, sans-serif;
+}
+
+.content {
+    h1 {
+        font-family: Neutrons;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        font-weight: 500;
+    }
 }
