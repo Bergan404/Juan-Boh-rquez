@@ -1,0 +1,15 @@
+---
+interface Props {
+    isitchecked: string;
+    number: string
+}
+
+const { number, isitchecked } = Astro.props;
+---
+<input
+    type="radio"
+    name="slider"
+    id={`s${number}`}
+    data-slide={number}
+    checked={isitchecked === "true" ? true : false}
+/>

@@ -1,0 +1,9 @@
+---
+const { number, image, title } = Astro.props;
+import { Image } from "astro:assets";
+---
+<label for={`s${number}`} id={`slide${number}`}>
+    <div class="zoom-container" data-slide="1">
+        <Image src={image} alt={title} />
+    </div>
+</label>

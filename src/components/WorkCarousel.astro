@@ -1,0 +1,24 @@
+---
+import CarouselSlector from "./Carousel-Parts/CarouselSlector.astro";
+
+import CarouselLabel from "./Carousel-Parts/CarouselLabel.astro";
+
+import drugs from "../assets/images/Drugs-sized.png";
+import classy from "../assets/images/Classy-sized.png";
+import morning from "../assets/images/In-the-morning.png";
+---
+
+<section id="slider">
+    <CarouselSlector number="1" isitchecked="true" />
+    <CarouselSlector number="2" isitchecked="false" />
+    <CarouselSlector number="3" isitchecked="false" />
+    <CarouselSlector number="4" isitchecked="false" />
+    <CarouselSlector number="5" isitchecked="false" />
+
+    <CarouselLabel number="1" image={classy} title="drugs" />
+    <CarouselLabel number="2" image={morning} title="drugs" />
+    <CarouselLabel number="3" image={drugs} title="drugs" />
+    <CarouselLabel number="4" image={morning} title="drugs" />
+    <CarouselLabel number="5" image={drugs} title="drugs" />
+
+</section>
