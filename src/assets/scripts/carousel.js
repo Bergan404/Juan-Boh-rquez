@@ -1,54 +1,32 @@
-let currentSlide = 1;
-let isPaused = false; // Variable to check if the slideshow is paused
 
-// Function to change the slide
-const changeSlide = () => {
-    if (!isPaused) {
-        // Remove 'can-zoom' class from all slides
-        document.querySelectorAll('.zoom-container').forEach((container) => {
-            container.classList.remove('can-zoom');
-        });
+// Get all radio buttons
+const radioButtons = document.querySelectorAll('.radio-button');
 
-        // Set the active slide
-        const activeSlide = document.getElementById(`s${currentSlide}`);
-        activeSlide.checked = true;
-
-        // Add 'can-zoom' class to the active slide
-        const activeContainer = document.querySelector(`.zoom-container[data-slide="${currentSlide}"]`);
-        if (activeContainer) {
-            activeContainer.classList.add('can-zoom');
-        }
-
-        // Move to the next slide
-        currentSlide++;
-        if (currentSlide > 5) {
-            currentSlide = 1;
-        }
-    }
-};
-
-// Start the auto-scroll
-let slideInterval = setInterval(changeSlide, 5000);
-
-// Function to pause the auto-scroll
-const pauseSlide = () => {
-    isPaused = true;
-};
-
-// Function to resume the auto-scroll
-const resumeSlide = () => {
-    isPaused = false;
-};
-
-// Adding event listeners to pause and resume auto-scroll on hover
-document.querySelectorAll('.zoom-container').forEach((container) => {
-    container.addEventListener('mouseover', () => {
-        if (!container.classList.contains('can-zoom')) {
-            return;
-        }
-        pauseSlide();
-    });
-    container.addEventListener('mouseout', () => {
-        resumeSlide();
-    });
+radioButtons.forEach(button => {
+    button.addEventListener('click', moveCheckedAttribute);
 });
+
+function moveCheckedAttribute(event) {
+    // Identify the clicked radio button
+    const clickedButton = this;
+    console.log(clickedButton, "this what we pressed right")
+
+    // Prevent the default behavior of the radio button
+    // event.preventDefault();
+
+    // Stop the event propagation
+    event.stopPropagation();
+
+    // Remove the 'checked' attribute from all radio buttons
+    radioButtons.forEach(button => {
+        button.removeAttribute('checked');
+        console.log( button.removeAttribute('checked', 'checked') , "remove check")
+    });
+
+    this.setAttribute('checked', 'checked');
+
+    console.log(this.setAttribute('checked', 'checked') , "this should now be checked")
+
+    // const event = new Event('change');
+    // this.dispatchEvent(event);
+}
