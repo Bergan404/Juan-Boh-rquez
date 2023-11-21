@@ -1,17 +1,18 @@
 ---
 interface Props {
+    section: string;
     isitchecked: string;
     number: string;
 }
 
-const { number, isitchecked } = Astro.props;
+const { section, number, isitchecked } = Astro.props;
 ---
 
 <input
-    class="radio-button"
+    class={`radio-button-${section}`}
     type="radio"
-    name="slider"
-    id={`s${number}`}
+    name={`slider-${section}`}
+    id={`s${number}-${section}`}
     data-slide={number}
     checked={isitchecked === "true" ? true : false}
 />

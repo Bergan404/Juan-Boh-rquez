@@ -1,0 +1,25 @@
+---
+import CarouselSlector from "./Carousel-Parts/CarouselSlector.astro";
+
+import CarouselLabel from "./Carousel-Parts/CarouselLabel.astro";
+
+import shirtOne from "../assets/images/shirt-one.png";
+import shirtTwo from "../assets/images/shirt-two.png";
+import shirtThree from "../assets/images/shirt-three.png";
+
+const { section } = Astro.props;
+---
+
+<section id={`slider-${section}`} class="my-3">
+    <CarouselSlector section="apparel" number="1" isitchecked="true" />
+    <CarouselSlector section="apparel" number="2" isitchecked="false" />
+    <CarouselSlector section="apparel" number="3" isitchecked="false" />
+    <CarouselSlector section="apparel" number="4" isitchecked="false" />
+    <CarouselSlector section="apparel" number="5" isitchecked="false" />
+
+    <CarouselLabel section="apparel" number="1" image={shirtOne} title="drugs" />
+    <CarouselLabel section="apparel" number="2" image={shirtTwo} title="drugs" />
+    <CarouselLabel section="apparel" number="3" image={shirtThree} title="drugs" />
+    <CarouselLabel section="apparel" number="4" image={shirtOne} title="drugs" />
+    <CarouselLabel section="apparel" number="5" image={shirtTwo} title="drugs" />
+</section>

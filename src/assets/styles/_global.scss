@@ -324,11 +324,13 @@ svg {
 }
 
 .works {
-    h2 {
+    h3 {
         font-family: Neutrons;
         color: white;
         text-transform: uppercase;
         letter-spacing: 6px;
         font-weight: 500;
+        border-bottom: 2px solid #00f0ff;
+        width: fit-content;;
     }
 }
