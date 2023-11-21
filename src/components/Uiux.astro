@@ -1,0 +1,25 @@
+---
+import CarouselSlector from "./Carousel-Parts/CarouselSlector.astro";
+
+import CarouselLabel from "./Carousel-Parts/CarouselLabel.astro";
+
+import imacOne from "../assets/images/imac-one.png";
+import imacTwo from "../assets/images/imac-two.png";
+import imacThree from "../assets/images/imac-three.png";
+
+const { section } = Astro.props;
+---
+
+<section id={`slider-${section}`} class="my-3 slider">
+    <CarouselSlector section="uiux" number="1" isitchecked="true" />
+    <CarouselSlector section="uiux" number="2" isitchecked="false" />
+    <CarouselSlector section="uiux" number="3" isitchecked="false" />
+    <CarouselSlector section="uiux" number="4" isitchecked="false" />
+    <CarouselSlector section="uiux" number="5" isitchecked="false" />
+
+    <CarouselLabel section="uiux" number="1" image={imacOne} title="drugs" />
+    <CarouselLabel section="uiux" number="2" image={imacTwo} title="drugs" />
+    <CarouselLabel section="uiux" number="3" image={imacThree} title="drugs" />
+    <CarouselLabel section="uiux" number="4" image={imacOne} title="drugs" />
+    <CarouselLabel section="uiux" number="5" image={imacTwo} title="drugs" />
+</section>
