@@ -11,6 +11,7 @@ import Uiux from "../components/Uiux.astro";
 	<!-- <TheExperience client:load /> -->
 	<Gridbackground />
 
+	<!-- homepage works -->
 	<section class="content py-6">
 		<div class="text-center">
 			<h1>My work</h1>
@@ -35,4 +36,36 @@ import Uiux from "../components/Uiux.astro";
 			<Uiux section="uiux" />
 		</div>
 	</section>
+
+	<!-- About Me section -->
+	<section class="about-me container-fluid">
+		<div class="container h-100">
+			<div class="grid-left col-5">
+				<h2>ABOUT ME</h2>
+				<p class="fancy">GRAPHIC DESIGNER WEB DESIGNER</p>
+				<p>
+					I am Juan Bohorquez a graphic designer, UX/UI designer and
+					web developer based in miami Florida.
+				</p>
+				<a href="">
+					<button class="btn">Learn More</button>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Become A Client -->
+	<section class="container-fluid">
+		<div class="container py-6">
+
+		</div>
+	</section>
 </Layout>
+
+<style lang="scss">
+	.about-me {
+		background-image: url(../assets/images/aboutme1.png);
+		background-size: cover;
+		height: 90vh;
+	}
+</style>

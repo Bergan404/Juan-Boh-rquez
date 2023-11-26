@@ -91,9 +91,10 @@ h6 {
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin: 0px 0px 1rem;
     line-height: 1.5em;
+    font-family: "abolition", sans-serif;
 
     @include mobile {
         font-size: 1.27em;
@@ -331,6 +332,41 @@ svg {
         letter-spacing: 6px;
         font-weight: 500;
         border-bottom: 2px solid #00f0ff;
-        width: fit-content;;
+        width: fit-content;
+        ;
+    }
+}
+
+.grid-left {
+    display: grid;
+    place-content: center left;
+    height: 100%;
+    color: white;
+
+    h2 {
+        font-family: Neutrons;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        font-weight: 500;
+    }
+
+    .fancy {
+        font-family: Neutrons;
+    }
+
+    p {
+        text-transform: uppercase;
+    }
+}
+
+.btn {
+    background-color: #00f0ff;
+    font-family: Neutrons;
+    padding: 0.5em 1em 0em 1em;
+
+    &:hover {
+        background-color: #00f0ff;
+        color: white;
     }
 }
