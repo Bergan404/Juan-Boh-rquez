@@ -112,6 +112,17 @@ p {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+
+.overlay-darker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 .m-logo {
 
     & {
@@ -337,6 +348,13 @@ svg {
     }
 }
 
+.fancy {
+    font-family: Neutrons;
+    letter-spacing: 6px;
+    font-weight: 500;
+    color: white;
+}
+
 .grid-left {
     display: grid;
     place-content: center left;
@@ -351,9 +369,7 @@ svg {
         font-weight: 500;
     }
 
-    .fancy {
-        font-family: Neutrons;
-    }
+
 
     p {
         text-transform: uppercase;

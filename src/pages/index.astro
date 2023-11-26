@@ -55,9 +55,14 @@ import Uiux from "../components/Uiux.astro";
 	</section>
 
 	<!-- Become A Client -->
-	<section class="container-fluid">
-		<div class="container py-6">
-
+	<section class="container-fluid client p-relative py-6">
+		<div class="overlay-darker"></div>
+		<div class="container py-6 text-center p-relative">
+			<h2 class="fancy">We Appreciate Clients</h2>
+			<h3 class="fancy">And Their Business</h3>
+			<a href="">
+				<button class="btn">BECOME A CLIENT</button>
+			</a>
 		</div>
 	</section>
 </Layout>
@@ -67,5 +72,11 @@ import Uiux from "../components/Uiux.astro";
 		background-image: url(../assets/images/aboutme1.png);
 		background-size: cover;
 		height: 90vh;
+	}
+
+	.client {
+		background-image: url(../assets/images/Logo-background.png);
+		background-size: contain;
+		background-position: center;
 	}
 </style>

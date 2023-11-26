@@ -1,5 +1,6 @@
 ---
-import Navbar from '../components/Nav/Navbar.astro';
+import Navbar from "../components/Nav/Navbar.astro";
+import Footer from "../components/Footer/Footer.astro";
 interface Props {
 	title: string;
 }
@@ -17,6 +18,7 @@ import "../assets/styles/styles.scss";
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
 			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -29,8 +31,9 @@ import "../assets/styles/styles.scss";
 	<body>
 		<slot />
 	</body>
-</html>
+	<Footer />
 
-<script src="../assets/scripts/grid.ts"></script>
-<script src="../assets/scripts/carousel.js"></script>
-<script src="../assets/scripts/svg-trace.js"></script>
+	<script src="../assets/scripts/grid.ts"></script>
+	<script src="../assets/scripts/carousel.js"></script>
+	<script src="../assets/scripts/svg-trace.js"></script>
+</html>
