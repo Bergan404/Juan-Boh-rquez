@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+
+import metaball from "../../assets/images/metaball.png";
+---
+
+<div class="wrapper">
+    <div class="grid-container">
+        <div class="m-grid"></div>
+        <div class="m-grid-top"></div>
+    </div>
+    <div class="overlay"></div>
+    <div class="m-logo">
+        <div class="m-logo__wrap">
+            <div class="center-content">
+                <Image src={metaball} alt="metaball" />
+                <h1 class="fancy">GALLERY</h1>
+                <h4 class="hero-context-text">an even place</h4>
+            </div>
+        </div>
+    </div>
+    <div
+        class="arrows-down"
+        style="width: 2em; height: 2em; background-color: transparent; z-index: 80;
+            bottom: 25px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: antiquewhite; animation: scrolldown 1.2s ease-in-out infinite 0.15s;"
+    >
+    </div>
+    <div
+        class="arrows-down"
+        style="width: 2em; height: 2em; background-color: transparent; z-index: 80;
+            bottom: 40px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: antiquewhite; animation: scrolldown 1.2s ease-in-out infinite;"
+    >
+    </div>
+</div>
+<style lang="scss">
+    .center-content {
+        display: grid;
+        place-content: center;
+        justify-items: center;
+        height: 100vh;
+        width: 100%;
+
+        h1 {
+            position: relative;
+            top: 40px;
+        }
+
+        .hero-context-text {
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: "abolition", sans-serif;
+        }
+    }
+    .arrows-down {
+        left: 50%;
+        transform: translateY(0%) rotate(45deg);
+
+        opacity: 0;
+    }
+    @keyframes scrolldown {
+        0% {
+            transform: translateY(20%) rotate(45deg);
+            opacity: 0.7;
+        }
+        50% {
+            transform: translateY(0%) rotate(45deg);
+            opacity: 0.2;
+        }
+        100% {
+            transform: translateY(20%) rotate(45deg);
+            opacity: 0.7;
+        }
+    }
+</style>
