@@ -101,6 +101,11 @@ p {
     }
 }
 
+.row > * {
+    padding-top: calc(var(--bs-gutter-x) * 0.5);
+    padding-bottom: calc(var(--bs-gutter-x) * 0.5);
+}
+
 
 .overlay {
     position: absolute;
@@ -346,6 +351,11 @@ svg {
         width: fit-content;
         ;
     }
+}
+
+.underline-blue {
+    width: fit-content;
+    border-bottom: 2px solid #00f0ff;
 }
 
 .fancy {

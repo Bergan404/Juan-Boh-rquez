@@ -1,0 +1,119 @@
+---
+import Gridbackgroundgallery from "../components/Hero-Sections/Gridbackgroundgallery.astro";
+import Layout from "../layouts/Layout.astro";
+import WorkCarousel from "../components/WorkCarousel.astro";
+import ApparelDesign from "../components/ApparelDesign.astro";
+import Uiux from "../components/Uiux.astro";
+import GalleryParts from "../components/GalleryParts.astro";
+
+import drugs from "../assets/images/Drugs-sized.png";
+---
+
+<Layout title="Welcome to Astro.">
+    <Gridbackgroundgallery />
+    <section class="container py-6">
+        <div class="d-flex justify-content-center">
+            <h2 class="fancy underline-blue">COVER</h2>
+        </div>
+        <div class="row justify-content-center">
+            <GalleryParts
+                imagePath="../assets/images/cover-1.png"
+                altText="Drugs"
+            />
+            <GalleryParts
+                imagePath="../assets/images/cover-2.png"
+                altText="Drugs"
+            />
+            <GalleryParts
+                imagePath="../assets/images/cover-3.png"
+                altText="Drugs"
+            />
+            <GalleryParts
+                imagePath="../assets/images/cover-4.png"
+                altText="Drugs"
+            />
+            <GalleryParts
+                imagePath="../assets/images/cover-5.png"
+                altText="Drugs"
+            />
+            <GalleryParts
+                imagePath="../assets/images/cover-6.png"
+                altText="Drugs"
+            />
+            <GalleryParts
+                imagePath="../assets/images/cover-7.png"
+                altText="Drugs"
+            />
+            <GalleryParts
+                imagePath="../assets/images/cover-8.png"
+                altText="Drugs"
+            />
+            <GalleryParts
+                imagePath="../assets/images/cover-9.png"
+                altText="Drugs"
+            />
+            <GalleryParts
+                imagePath="../assets/images/cover-10.png"
+                altText="Drugs"
+            />
+            <GalleryParts
+                imagePath="../assets/images/cover-11.png"
+                altText="Drugs"
+            />
+        </div>
+    </section>
+
+    <section class="container py-6">
+        <div class="d-flex justify-content-center">
+            <h2 class="fancy underline-blue">APPAREL DESIGN</h2>
+        </div>
+        <div class="row justify-content-center">
+            <GalleryParts
+                imagePath="../assets/images/shirt-1.png"
+                altText="Drugs"
+            />
+            <GalleryParts
+                imagePath="../assets/images/shirt-2.png"
+                altText="Drugs"
+            />
+            <GalleryParts
+                imagePath="../assets/images/shirt-3.png"
+                altText="Drugs"
+            />
+        </div>
+    </section>
+
+    <section class="container py-6">
+        <div class="d-flex justify-content-center">
+            <h2 class="fancy underline-blue">WEB DESIGN</h2>
+        </div>
+        <div class="row justify-content-center">
+            <GalleryParts
+                imagePath="../assets/images/web-1.png"
+                altText="Drugs"
+            />
+            <GalleryParts
+                imagePath="../assets/images/web-2.png"
+                altText="Drugs"
+            />
+            <GalleryParts
+                imagePath="../assets/images/web-3.png"
+                altText="Drugs"
+            />
+        </div>
+    </section>
+</Layout>
+
+<style lang="scss">
+    .about-me {
+        background-image: url(../assets/images/aboutme1.png);
+        background-size: cover;
+        height: 90vh;
+    }
+
+    .client {
+        background-image: url(../assets/images/Logo-background.png);
+        background-size: contain;
+        background-position: center;
+    }
+</style>
