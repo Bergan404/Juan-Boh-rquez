@@ -2,9 +2,12 @@
 import TheExperience from "../components/tresjs/TheExperience.vue";
 import Gridbackground from "../components/Hero-Sections/Gridbackground.astro";
 import Layout from "../layouts/Layout.astro";
-import WorkCarousel from "../components/WorkCarousel.astro";
-import ApparelDesign from "../components/ApparelDesign.astro";
-import Uiux from "../components/Uiux.astro";
+import WorkCarousel from "../components/All-Carousels/WorkCarousel.astro";
+import ApparelDesign from "../components/All-Carousels/ApparelDesign.astro";
+import Uiux from "../components/All-Carousels/Uiux.astro";
+
+import { Image } from "astro:assets";
+import aboutMe from "../assets/images/aboutme2.png";
 ---
 
 <Layout title="Home - Juan Bohórquez">
@@ -40,7 +43,10 @@ import Uiux from "../components/Uiux.astro";
 	<!-- About Me section -->
 	<section class="about-me container-fluid">
 		<div class="container h-100">
-			<div class="grid-left col-5">
+			<div class="grid-left col-lg-5">
+				<div class="d-block d-lg-none object-fit">
+					<Image src={aboutMe} alt="background" />
+				</div>
 				<h2>ABOUT ME</h2>
 				<p class="fancy">GRAPHIC DESIGNER WEB DESIGNER</p>
 				<p>
@@ -78,5 +84,19 @@ import Uiux from "../components/Uiux.astro";
 		background-image: url(../assets/images/Logo-background.png);
 		background-size: contain;
 		background-position: center;
+	}
+
+	@media (max-width: 992px) {
+		.about-me {
+			background-image: none;
+			height: auto;
+			padding: 2em 0em;
+		}
+
+		.client {
+			background-image: none;
+			height: auto;
+			padding: 2em 0em;
+		}
 	}
 </style>

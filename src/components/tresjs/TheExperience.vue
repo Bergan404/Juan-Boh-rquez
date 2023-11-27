@@ -36,19 +36,36 @@ onLoop(({ delta, elapsed }) => {
 </script>
 
 <template>
-    <div class="tres-container">
+    <div class="tres-container d-lg-block d-none">
         <TresCanvas v-bind="gl">
             <TresPerspectiveCamera :position="[0, 0, 45]" :fov="45" :aspect="1" :near="0.1" :far="1000" />
             <MouseParallax :factor="5" :ease="3" />
             <Levioso>
                 <Suspense>
-                    <Error :scale="[0.1, 0.1, 0.1]" :position="0" :rotate-x="0"  />
+                    <Error :scale="[0.1, 0.1, 0.1]" :position="0" :rotate-x="0" />
                 </Suspense>
             </Levioso>
             <TresGroup ref="groupRef">
                 <Stars ref="starRef" />
             </TresGroup>
             <!-- <OrbitControls /> -->
+            <TresAmbientLight :intensity="1" />
+            <TresDirectionalLight :position="[-4, -2, 2]" :intensity="1" cast-shadow color="#00f0ff" />
+            <TresDirectionalLight :position="[4, 6, 4]" :intensity="2" cast-shadow color="white" />
+        </TresCanvas>
+    </div>
+    <div class="tres-container d-lg-none d-md-block">
+        <TresCanvas v-bind="gl">
+            <TresPerspectiveCamera :position="[0, 0, 15]" :fov="45" :aspect="1" :near="0.1" :far="1000" />
+            <Levioso>
+                <Suspense>
+                    <Error :scale="[0.01, 0.01, 0.01]" :position="0" :rotate-x="0" />
+                </Suspense>
+            </Levioso>
+            <TresGroup ref="groupRef">
+                <Stars ref="starRef" />
+            </TresGroup>
+            <OrbitControls />
             <TresAmbientLight :intensity="1" />
             <TresDirectionalLight :position="[-4, -2, 2]" :intensity="1" cast-shadow color="#00f0ff" />
             <TresDirectionalLight :position="[4, 6, 4]" :intensity="2" cast-shadow color="white" />

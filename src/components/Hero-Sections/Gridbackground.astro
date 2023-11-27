@@ -183,9 +183,10 @@
         }
     }
     .arrows-down {
-        left: 50%;
+        left: 0;
+        right: 0;
+        margin: auto;
         transform: translateY(0%) rotate(45deg);
-
         opacity: 0;
     }
     @keyframes scrolldown {
@@ -200,6 +201,13 @@
         100% {
             transform: translateY(20%) rotate(45deg);
             opacity: 0.7;
+        }
+    }
+
+    @media (max-width: 546px) {
+        svg {
+            width: 300px;
+            height: auto;
         }
     }
 </style>

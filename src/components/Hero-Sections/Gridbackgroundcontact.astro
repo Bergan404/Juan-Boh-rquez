@@ -11,10 +11,10 @@
     <div class="m-logo">
         <div class="m-logo__wrap">
             <div class="center-content p-5">
-                <div class="col">
+                <div class="col-md">
                     <p>let’s talk about your next project</p>
                 </div>
-                <div class="form col">
+                <div class="form col-md col-12">
                     <form id="my-form" class="validator_form">
                         <input
                             class="name-email"
@@ -153,6 +153,12 @@
         100% {
             transform: translateY(20%) rotate(45deg);
             opacity: 0.7;
+        }
+    }
+
+    @media (max-width:768px) {
+        .center-content {
+            flex-direction: column;
         }
     }
 </style>

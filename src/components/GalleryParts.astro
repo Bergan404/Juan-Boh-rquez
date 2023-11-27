@@ -10,7 +10,7 @@ const { imagePath, altText} = Astro.props;
 const images = import.meta.glob('../assets/images/*.{jpeg,jpg,png,gif}')
 ---
 
-<div class="col-4">
+<div class="col-md-4">
     <Image src={images[imagePath]()} alt={altText} />
 </div>
 

@@ -1,0 +1,54 @@
+---
+import CarouselSlector from "./Carousel-Parts/CarouselSlector.astro";
+
+import CarouselLabel from "./Carousel-Parts/CarouselLabel.astro";
+
+import drugs from "../../assets/images/Drugs-sized.png";
+import classy from "../../assets/images/Classy-sized.png";
+import morning from "../../assets/images/In-the-morning.png";
+
+const { section } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<section id={`slider-${section}`} class="my-3 slider d-lg-block d-none">
+    <CarouselSlector section="album" number="1" isitchecked="true" />
+    <CarouselSlector section="album" number="2" isitchecked="false" />
+    <CarouselSlector section="album" number="3" isitchecked="false" />
+    <CarouselSlector section="album" number="4" isitchecked="false" />
+    <CarouselSlector section="album" number="5" isitchecked="false" />
+
+    <CarouselLabel section="album" number="1" image={classy} title="drugs" />
+    <CarouselLabel section="album" number="2" image={morning} title="drugs" />
+    <CarouselLabel section="album" number="3" image={drugs} title="drugs" />
+    <CarouselLabel section="album" number="4" image={classy} title="drugs" />
+    <CarouselLabel section="album" number="5" image={morning} title="drugs" />
+</section>
+
+<section class="d-lg-none">
+    <div
+        id="sharing"
+        class="splide py-6 container"
+        aria-label="Basic Structure Example"
+    >
+        <div class="splide__track">
+            <div class="splide__list">
+                <div class="splide__slide object-fit">
+                    <figure class="better-shadow hover col-auto">
+                        <Image src={classy} alt="classy" />
+                    </figure>
+                </div>
+                <div class="splide__slide object-fit">
+                    <figure class="better-shadow hover col-auto">
+                        <Image src={drugs} alt="drugs" />
+                    </figure>
+                </div>
+                <div class="splide__slide object-fit">
+                    <figure class="better-shadow hover col-auto">
+                        <Image src={morning} alt="morning" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

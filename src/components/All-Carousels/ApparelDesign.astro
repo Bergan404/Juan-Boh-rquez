@@ -1,0 +1,54 @@
+---
+import CarouselSlector from "./Carousel-Parts/CarouselSlector.astro";
+
+import CarouselLabel from "./Carousel-Parts/CarouselLabel.astro";
+
+import shirtOne from "../../assets/images/shirt-one.png";
+import shirtTwo from "../../assets/images/shirt-two.png";
+import shirtThree from "../../assets/images/shirt-three.png";
+
+const { section } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<section id={`slider-${section}`} class="my-3 slider d-lg-block d-none">
+    <CarouselSlector section="apparel" number="1" isitchecked="true" />
+    <CarouselSlector section="apparel" number="2" isitchecked="false" />
+    <CarouselSlector section="apparel" number="3" isitchecked="false" />
+    <CarouselSlector section="apparel" number="4" isitchecked="false" />
+    <CarouselSlector section="apparel" number="5" isitchecked="false" />
+
+    <CarouselLabel section="apparel" number="1" image={shirtOne} title="drugs" />
+    <CarouselLabel section="apparel" number="2" image={shirtTwo} title="drugs" />
+    <CarouselLabel section="apparel" number="3" image={shirtThree} title="drugs" />
+    <CarouselLabel section="apparel" number="4" image={shirtOne} title="drugs" />
+    <CarouselLabel section="apparel" number="5" image={shirtTwo} title="drugs" />
+</section>
+
+<section class="d-lg-none">
+    <div
+        id="apparel"
+        class="splide py-6 container"
+        aria-label="Basic Structure Example"
+    >
+        <div class="splide__track">
+            <div class="splide__list">
+                <div class="splide__slide object-fit">
+                    <figure class="better-shadow hover col-auto">
+                        <Image src={shirtOne} alt="classy" />
+                    </figure>
+                </div>
+                <div class="splide__slide object-fit">
+                    <figure class="better-shadow hover col-auto">
+                        <Image src={shirtTwo} alt="drugs" />
+                    </figure>
+                </div>
+                <div class="splide__slide object-fit">
+                    <figure class="better-shadow hover col-auto">
+                        <Image src={shirtThree} alt="morning" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
