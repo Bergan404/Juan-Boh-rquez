@@ -1,0 +1,30 @@
+---
+import Navbar from "../components/Nav/Navbar.astro";
+import Footer from "../components/Footer/Footer.astro";
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+
+import "bootstrap/dist/css/bootstrap.css";
+import "../assets/styles/styles.scss";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.508/build/spline-viewer.js"></script>
+    </head>
+    <Navbar />
+    <body>
+        <slot />
+    </body>
+    <Footer />
+</html>
