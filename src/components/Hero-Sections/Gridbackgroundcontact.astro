@@ -1,7 +1,5 @@
 ---
-import { Image } from "astro:assets";
 
-import metaball from "../../assets/images/metaball.png";
 ---
 
 <div class="wrapper">
@@ -12,37 +10,122 @@ import metaball from "../../assets/images/metaball.png";
     <div class="overlay"></div>
     <div class="m-logo">
         <div class="m-logo__wrap">
-            <div class="center-content">
-                <Image src={metaball} alt="metaball" />
-                <h1 class="fancy">GALLERY</h1>
-                <h4 class="hero-context-text">an even place</h4>
+            <div class="center-content p-5">
+                <div class="col">
+                    <p>let’s talk about your next project</p>
+                </div>
+                <div class="form col">
+                    <form id="my-form" class="validator_form">
+                        <input
+                            class="name-email"
+                            type="text"
+                            placeholder="Name"
+                            name="Name"
+                            required
+                        />
+
+                        <input
+                            class="name-email"
+                            type="email"
+                            placeholder="Email"
+                            name="Email"
+                            required
+                        />
+
+                        <input
+                            class="name-email"
+                            type="tel"
+                            placeholder="Phone"
+                            name="Email"
+                            required
+                        />
+
+                        <br />
+
+                        <textarea
+                            id="message"
+                            name="Message"
+                            placeholder="Your Message..."
+                            style="height:200px"
+                            class="other-inputs"
+                            required></textarea>
+
+                        <br />
+
+                        <div class="button_contact">
+                            <input
+                                type="hidden"
+                                name="_next"
+                                value="index.html"
+                            />
+                            <button
+                                id="form-button"
+                                class="btn"
+                                type="submit"
+                                value="submit">Send Email</button
+                            >
+                        </div>
+                        <p id="my-form-status"></p>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <div
-        class="arrows-down"
-        style="width: 2em; height: 2em; background-color: transparent; z-index: 80;
-            bottom: 25px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: antiquewhite; animation: scrolldown 1.2s ease-in-out infinite 0.15s;"
-    >
-    </div>
-    <div
-        class="arrows-down"
-        style="width: 2em; height: 2em; background-color: transparent; z-index: 80;
-            bottom: 40px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: antiquewhite; animation: scrolldown 1.2s ease-in-out infinite;"
-    >
     </div>
 </div>
 <style lang="scss">
     .center-content {
-        display: grid;
+        display: flex;
         place-content: center;
         justify-items: center;
-        height: 100vh;
-        width: 100%;
+        align-items: center;
+        align-content: center;
+        gap: 2em;
+        background-color: hsla(0, 0%, 9%, 0.8);
+        width: 90vw;
 
         h1 {
             position: relative;
             top: 40px;
+        }
+
+        p {
+            color: white;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+
+            .validator_form {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    background: none;
+                    color: white;
+                    position: relative;
+                    border-bottom: 3px solid #00f0ff;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    padding: 1em;
+                    font-family: "abolition", sans-serif;
+                    &::placeholder {
+                        color: white;
+                    }
+                }
+                textarea {
+                    background: none;
+                    color: white;
+                    position: relative;
+                    border: 3px solid #00f0ff;
+                    padding: 1em;
+                    font-family: "abolition", sans-serif;
+                    &::placeholder {
+                        color: white;
+                    }
+                }
+            }
         }
 
         .hero-context-text {

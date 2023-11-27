@@ -1,3 +1,3 @@
-document.body.onclick = function () {
-	this.innerHTML = this.innerHTML;
-};
+// document.body.onclick = function () {
+// 	this.innerHTML = this.innerHTML;
+// };
